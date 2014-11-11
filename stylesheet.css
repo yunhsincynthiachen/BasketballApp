@@ -4,6 +4,9 @@
     width:100%;
 	color: #480000;
 }
+body{
+    margin:0;
+}
 
 header {
     border-bottom: solid;
@@ -24,13 +27,15 @@ p {
 
 #Left {
     display:inline-block;
-    width:24.5%;
+    width:calc(25% - 2px);
+    /*background-color:red;*/
     height:100%
 }
 
 #Right {
     display:inline-block;
-    width:74.25%;
+    width: calc(75% - 2px);
+    /*backgrousnd-color:blue;*/
     height: 100%;
     vertical-align: top;
 }

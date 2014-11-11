@@ -10,6 +10,30 @@
 		<!-- Load Data Sheet -->
 		<script src="data.js"></script>
 		<title> Basketball </title>
+		<script>
+		  function kimonoCallback(data) {
+		    // do something with the data
+		    // please make sure the scope of this function is global
+		    // alert('abc');
+		    console.log(data);
+		  }
+
+		  $.ajax({
+		    "url":"https://www.kimonolabs.com/api/8smal7rw?apikey=cjef2f7yRBb7uYCJWWPwpyuUwQq4JtoA&callback=kimonoCallback",
+		    "crossDomain":true,
+		    "dataType":"jsonp"
+		});
+		  $(document).ready(function(){
+		  	$('.Button').click(function(e){
+		  		var person = $(this).attr('data-person');
+		  		alert('You clicked on '+$(this).attr('data-person'));
+		  				    $('#Right').html('<h1>Hello '+person+'</h1>')
+
+		  	})
+
+		  });
+
+		</script>
 	</head>
 
 	<body>
@@ -20,13 +44,13 @@
 		</header>
 		<div class= "BottomHalf">
 			<div id= "Left">
-				<div class= "Button">
+				<div class= "Button" data-person="adit">
 					<p> "Adit" </p>
 				</div>
-				<div class= "Button">
+				<div class= "Button" data-person="cynthia">
 					<p> "Cynthia" </p>
 				</div>
-				<div class= "Button">
+				<div class= "Button" data-person="both">
 					<p> "Both" </p>
 				</div> 
 			</div>
