@@ -8,54 +8,31 @@
 		<!-- Load CSS Stylesheet -->
 		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 		<!-- Load Data Sheet -->
-		<script src="data.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+
 		<title> Basketball </title>
-		<script>
-		  function kimonoCallback(data) {
-		    // do something with the data
-		    // please make sure the scope of this function is global
-		    // alert('abc');
-		    console.log(data);
-		  }
 
-		  $.ajax({
-		    "url":"https://www.kimonolabs.com/api/8smal7rw?apikey=cjef2f7yRBb7uYCJWWPwpyuUwQq4JtoA&callback=kimonoCallback",
-		    "crossDomain":true,
-		    "dataType":"jsonp"
-		});
-		  $(document).ready(function(){
-		  	$('.Button').click(function(e){
-		  		var person = $(this).attr('data-person');
-		  		alert('You clicked on '+$(this).attr('data-person'));
-		  				    $('#Right').html('<h1>Hello '+person+'</h1>')
-
-		  	})
-
-		  });
-
-		</script>
 	</head>
 
 	<body>
 		<header>
 			<h1 id= "BasketballTitle"> Welcome to the 2014-2015 NBA Basketball Results </h1>
-			<p id= "FirstName"> Adit's teams: </p>
-			<p id = "SecondName"> Cynthia's teams: </p>
+			<p id= "FirstName"> Adit's teams: Rockets, Bulls, Mavericks, Cavaliers, Wizards, Heat, Thunder</p>
+			<p id = "SecondName"> Cynthia's teams: Warriors, Grizzlies, Raptors, Trailblazers, Spurs, Clippers, Hawks</p>
 		</header>
 		<div class= "BottomHalf">
 			<div id= "Left">
 				<div class= "Button" data-person="adit">
-					<p> "Adit" </p>
+					<p class= "name"> Adit </p>
 				</div>
 				<div class= "Button" data-person="cynthia">
-					<p> "Cynthia" </p>
+					<p class= "name"> Cynthia </p>
 				</div>
 				<div class= "Button" data-person="both">
-					<p> "Both" </p>
+					<p class= "name"> Both </p>
 				</div> 
 			</div>
 			<div id= "Right">
-				<p> "This is right" </p>
 			</div>
 		</div>
 	</body>
