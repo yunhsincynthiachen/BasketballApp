@@ -1,5 +1,17 @@
 var cynthia_wins = 0;
 var adit_wins = 0;
+var totals = {
+	"adit":{
+		teams:['Houston','Chicago','Dallas','Cleveland','Washington','Miami','Oklahoma City'],
+		total_wins:0,
+		total_losses:0
+	},
+	"cynthia":{
+		teams:['Golden State','Memphis','Toronto','Portland','San Antonio','L.A. Clippers','Atlanta'],
+		total_wins:0,
+		total_losses:0
+	}
+}
 function kimonoCallback(data) {
 // do something with the data
 // please make sure the scope of this function is global
@@ -10,6 +22,7 @@ function kimonoCallback(data) {
 	var dictof_aditteams = {};
 	var dictof_cynthiateams = {};
 	var alldata = data.results['NBA Parse']
+	console.log(data)
 
 	//To make dictionaries of the team names and number of wins of each person
 	for (j = 0; j<adit_teams.length; j++){
@@ -52,7 +65,9 @@ $.ajax({
 $(document).ready(function(){
 	$('.Button').click(function(){
 		var person = $(this).attr('data-person');
-		//alert('You clicked on '+$(this).attr('data-person'));
+		alert('You clicked on '+person);
+		console.log(totals[person]);
+			$('#Right').html('')
 			$('#Right').html('<p>Adit: '+ adit_wins+'</p>' + '<p>Cynthia: '+ cynthia_wins+'</p>')
 	})
 
