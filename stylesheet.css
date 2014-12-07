@@ -25,6 +25,15 @@ p {
     cursor: hand;
 }
 
+.ButtonHeader {
+    padding-top: 1%;
+    padding-left: 40%;
+    padding-right: 30%;
+    display:block;
+    /*text-align: center;*/
+    height: 10%;
+    width: 100%;
+}
 .BottomHalf {
     /*border-style: solid;
     border-color:#666666; */
@@ -33,7 +42,7 @@ p {
 	padding-right: 30%;
     display:block;
 	/*text-align: center;*/
-    height: 85%;
+    height: 75%;
     width: 100%;
 }
 

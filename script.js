@@ -65,15 +65,15 @@ $.ajax({
 });
 
 $(document).ready(function(){
-	$('.Button').click(function(){
+	$(':button').click(function(){
 		var person = $(this).attr('data-person');
 		//alert('You clicked on '+person);
 		console.log(totals[person]);
 		if (person == "Both") {
-			$('#Right').html('<p>Adit: '+ totals['Adit']['total_wins']+'</p>' + '<p>Cynthia: '+ totals['Cynthia']['total_wins']+'</p>')
+			$('.BottomHalf').html('<p>Adit: '+ totals['Adit']['total_wins']+'</p>' + '<p>Cynthia: '+ totals['Cynthia']['total_wins']+'</p>')
 		}
 		else {
-			$('#Right').html(person + ': ' + totals[person]['total_wins'])
+			$('.BottomHalf').html(person + ': ' + totals[person]['total_wins'])
 		}
 			//$('#Right').html('<p>Adit: '+ adit_wins+'</p>' + '<p>Cynthia: '+ cynthia_wins+'</p>')
 	})
