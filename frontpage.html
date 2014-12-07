@@ -7,11 +7,18 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
 		<!-- Load CSS Stylesheet -->
 		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+        <!-- Bootstrap Core CSS -->
+    	<link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- Load Data Sheet -->
 		<script type="text/javascript" src="script.js"></script>
-		<!-- Load D3 JS -->
+        <!-- Load Nice Font -->
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	    <!-- Custom Fonts -->
+	    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<!-- Load Data Sheet -->
+		<script type="text/javascript" src="script.js"></script>
+        <!-- Load D3 JS -->
 		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-
 		<title> Basketball Wins Tracker </title>
 
 	</head>
@@ -19,23 +26,14 @@
 	<body>
 		<header>
 			<h1 id= "BasketballTitle"> Welcome to the 2014-2015 NBA Basketball Results </h1>
-			<p id= "FirstName"> Adit's teams: Rockets, Bulls, Mavericks, Cavaliers, Wizards, Heat, Thunder</p>
-			<p id = "SecondName"> Cynthia's teams: Warriors, Grizzlies, Raptors, Trailblazers, Spurs, Clippers, Hawks</p>
-		</header>
-		<div class= "BottomHalf">
-			<div id= "Left">
-				<div class= "Button" data-person="Adit">
-					<p class= "name"> Adit </p>
-				</div>
-				<div class= "Button" data-person="Cynthia">
-					<p class= "name"> Cynthia </p>
-				</div>
-				<div class= "Button" data-person="Both">
-					<p class= "name"> Both </p>
-				</div> 
-			</div>
-			<div id= "Right">
-			</div>
+			<p id= "FirstName"> Adit's teams: <a href="http://www.nba.com/rockets/">Rockets</a>, <a href="http://www.nba.com/bulls/">Bulls</a>, <a href="http://www.nba.com/mavericks/">Mavericks</a>, <a href="http://www.nba.com/cavaliers/">Cavaliers</a>, <a href="http://www.nba.com/wizards/">Wizards</a>, <a href="http://www.nba.com/heat">Heat</a>, <a href="http://www.nba.com/thunder/">Thunder</a></p>
+			<p id = "SecondName"> Cynthia's teams: <a href="http://www.nba.com/warriors/">Warriors</a>, <a href="http://www.nba.com/grizzlies/">Grizzlies</a>, <a href="http://www.nba.com/raptors/">Raptors</a>, <a href="http://www.nba.com/trailblazers/">Trailblazers</a>, <a href="http://www.nba.com/spurs/">Spurs</a>, <a href="http://www.nba.com/clippers/">Clippers</a>, <a href="http://www.nba.com/hawks/">Hawks</a></p>
+		</header><br>
+
+        <div class="BottomHalf">
+                <button type="button" class="btn btn-lg btn-primary" data-person="adit"> Adit </button>
+                <button type="button" class="btn btn-lg btn-primary" data-person="cynthia"> Cynthia </button>
+                <button type="button" class="btn btn-lg btn-primary" data-person="both"> Both </button>
 		</div>
 	</body>
 
