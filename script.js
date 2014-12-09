@@ -68,7 +68,6 @@ $(document).ready(function(){
 	$(':button').click(function(){
 		var person = $(this).attr('data-person');
 		//alert('You clicked on '+person);
-		console.log(totals[person]);
 		if (person == "Both") {
 			$('.BottomHalf').html('<p>Adit: '+ totals['Adit']['total_wins']+'</p>' + '<p>Cynthia: '+ totals['Cynthia']['total_wins']+'</p>')
 		}
