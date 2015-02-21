@@ -14,11 +14,12 @@ var totals = {
 	}
 }
 
-function kimonoCallback(data) {
-// do something with the data
-// please make sure the scope of this function is global
-// alert('abc');
-	var alldata = data.results['NBA Parse'];
+  $.ajax({
+  url:"https://www.kimonolabs.com/api/ondemand/8smal7rw?apikey=cjef2f7yRBb7uYCJWWPwpyuUwQq4JtoA",
+  crossDomain: true,
+  dataType: "jsonp",
+  success: function (data) {
+    var alldata = data.results['NBA Parse'];
 	//next part makes dictionary in the totals variable into variable
 	var dictof_aditteams = totals['Adit']['dict_of_teams'];
 	var dictof_cynthiateams = totals['Cynthia']['dict_of_teams'];
@@ -56,12 +57,10 @@ function kimonoCallback(data) {
 
 	console.log(dictof_aditteams);
 	console.log(dictof_cynthiateams);
-}
-
-$.ajax({
-	"url":"https://www.kimonolabs.com/api/8smal7rw?apikey=cjef2f7yRBb7uYCJWWPwpyuUwQq4JtoA&callback=kimonoCallback",
-	"crossDomain":true,
-	"dataType":"jsonp"
+  },
+  error: function (xhr, status) {
+    //handle errors
+  }
 });
 
 $(document).ready(function(){
