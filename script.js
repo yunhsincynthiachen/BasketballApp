@@ -54,7 +54,7 @@ var totals = {
 	}
 
 	//alert(adit_wins+', '+cynthia_wins);
-	alert(totals['Adit']['total_wins'])
+	//alert(totals['Adit']['total_wins'])
 	console.log(dictof_aditteams);
 	console.log(dictof_cynthiateams);
   },
