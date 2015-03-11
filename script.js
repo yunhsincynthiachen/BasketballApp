@@ -15,7 +15,7 @@ var totals = {
 }
 
   $.ajax({
-  url:"https://www.kimonolabs.com/api/ondemand/8smal7rw?apikey=cjef2f7yRBb7uYCJWWPwpyuUwQq4JtoA",
+  url:"https://www.kimonolabs.com/api/8smal7rw?apikey=cjef2f7yRBb7uYCJWWPwpyuUwQq4JtoA",
   crossDomain: true,
   dataType: "jsonp",
   success: function (data) {
@@ -54,7 +54,7 @@ var totals = {
 	}
 
 	//alert(adit_wins+', '+cynthia_wins);
-
+	alert(totals['Adit']['total_wins'])
 	console.log(dictof_aditteams);
 	console.log(dictof_cynthiateams);
   },
